@@ -4,13 +4,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import { SvgIcon } from '@mui/material';
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
-import Router from './Router';
-import MainPage from '../pages/MainPage';
-import App from '../../App';
-
+import { useNavigate } from 'react-router-dom';
 
 export default function Appbar() {
   const navigate = useNavigate();

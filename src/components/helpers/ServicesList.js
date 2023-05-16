@@ -10,12 +10,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { useNavigate } from 'react-router-dom';
 
 export default function ServicesList() {
-  const [open, setOpen] = React.useState(true);
   const navigate = useNavigate();
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
 
   return (
     <List
@@ -24,7 +19,7 @@ export default function ServicesList() {
       aria-labelledby="nested-list-subheader"
     >
       <ListItemButton
-        onClick={() => { navigate("/"); }}
+        onClick={() => { navigate("/createOrder"); }}
       >
         <ListItemIcon>
           <SendIcon />
@@ -41,7 +36,9 @@ export default function ServicesList() {
         <ListItemText primary="Посмотреть тарифы" />
       </ListItemButton>
 
-      <ListItemButton>
+      <ListItemButton
+        onClick={() => { navigate("/orderStatus"); }}
+      >
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
@@ -49,7 +46,9 @@ export default function ServicesList() {
       </ListItemButton>
 
       
-      <ListItemButton>
+      <ListItemButton
+        onClick={() => { navigate("/deleteOrder"); }}
+      >
         <ListItemIcon>
           <DeleteIcon />
         </ListItemIcon>
