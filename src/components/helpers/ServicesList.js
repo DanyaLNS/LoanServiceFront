@@ -14,7 +14,7 @@ export default function ServicesList() {
 
   return (
     <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      sx={{ width: '100%', maxWidth: 600, bgcolor: 'background.paper' }}
       component="nav"
       aria-labelledby="nested-list-subheader"
     >
@@ -24,7 +24,7 @@ export default function ServicesList() {
         <ListItemIcon>
           <SendIcon />
         </ListItemIcon>
-        <ListItemText primary="Подать заявку на оформление" />
+        <ListItemText primary="Подать заявку на оформление"/>
       </ListItemButton>
 
       <ListItemButton
