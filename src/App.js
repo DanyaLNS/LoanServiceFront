@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component }  from 'react'; 
+import Appbar from './components/helpers/Appbar';
+import Tariffs from './components/pages/TariffPage';
+import { BrowserRouter, NavLink, Routes, Route } from 'react-router-dom';
+import { Paper } from '@mui/material';
+import { Container } from '@material-ui/core';
+import MainPage from './components/pages/MainPage';
+import TariffPage from './components/pages/TariffPage';
 
-function App() {
+const styles = () => {
+};
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='Application'>
+      <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<MainPage/>}/>
+            <Route path="/tariffs" element={<TariffPage/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
-export default App;
