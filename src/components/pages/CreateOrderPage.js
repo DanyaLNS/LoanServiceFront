@@ -10,8 +10,7 @@ import Alert from '@mui/material/Alert';
 
 export default function CreateOrderPage(){
     const paperStyle={padding:'20px 20px', width:600,margin:"20px auto"}
-    const [userId, setUserId] = useState('')
-    const [tariff, setTariff] = useState('')
+
     return (
       <div className="Tariffs">
         <Appbar/>
@@ -51,7 +50,6 @@ export default function CreateOrderPage(){
     .then(response => response.json())
     .then((usefulData) => {
       if (usefulData.data != null) {
-        console.log(usefulData);
         setLoading(false);
         setError(true);
         setData(usefulData);
